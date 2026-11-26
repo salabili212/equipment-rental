@@ -39,20 +39,21 @@ public class Main {
         //downCasting calls and search
         for (Equipment e: equipments){
             if(e instanceof Equipment && (e.getClass() == Laptop.class)){
-                if (((Laptop) e).isInsuranceSelected()){
-                    System.out.println("Laptops:");
-                    System.out.println(e.getName());
-                    Laptop laptop = (Laptop) e;
-                    System.out.println("Casting one:");
-                    System.out.println(laptop.getRamGB());
-                    System.out.println("Casting two:");
-                    System.out.println(((Laptop) e).getRamGB());
-                    System.out.println("Casting one:");
-                    Laptop laptop12 = (Laptop) e;
-                    System.out.println(laptop12.isInsuranceSelected());
-                    System.out.println("Casting two:");
-                    System.out.println("Insurance is: " + ((Laptop) e).isInsuranceSelected());
-                }
+
+                System.out.println("Laptops:");
+                System.out.println(e.getName());
+                System.out.println("Insurance status: " + ((Laptop)e).isInsuranceSelected());
+                Laptop laptop = (Laptop) e;
+                System.out.println("Casting one:");
+                System.out.println(laptop.getRamGB());
+                System.out.println("Casting two:");
+                System.out.println(((Laptop) e).getRamGB());
+                System.out.println("Casting one:");
+                Laptop laptop12 = (Laptop) e;
+                System.out.println(laptop12.isInsuranceSelected());
+                System.out.println("Casting two:");
+                System.out.println("Insurance is: " + ((Laptop) e).isInsuranceSelected());
+
             }
         }
 

@@ -14,9 +14,7 @@ public abstract class Equipment {
         System.out.println("Equipment: " + this.name);
     }
 
-    public BigDecimal calculateRentalCost(int day){
-        return BigDecimal.valueOf(this.dailyRate).multiply(BigDecimal.valueOf(day));
-    }
+    public abstract BigDecimal calculateRentalCost(int day);
 
 
     @Override

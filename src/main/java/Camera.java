@@ -13,7 +13,9 @@ public class Camera extends Equipment{
     @Override
     public BigDecimal calculateRentalCost(int day){
         BigDecimal total = BigDecimal.valueOf(this.getDailyRate()).multiply(BigDecimal.valueOf(day));
-        if(tripodIncluded == true) total.add(BigDecimal.valueOf(10));
+        if(tripodIncluded == true) {
+            total = total.add(BigDecimal.valueOf(10));
+        }
         return total;
 
     }

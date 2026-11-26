@@ -13,8 +13,10 @@ public class Laptop extends Equipment{
 
     @Override
     public BigDecimal calculateRentalCost(int day){
+        if(insuranceSelected == true) {
+            this.setDailyRate(getDailyRate() + 5);
+        }
         BigDecimal total = BigDecimal.valueOf(this.getDailyRate()).multiply(BigDecimal.valueOf(day));
-        if(insuranceSelected == true) total.add(BigDecimal.valueOf(5));
         return total;
     }
 
